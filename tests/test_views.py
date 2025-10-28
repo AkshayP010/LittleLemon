@@ -1,6 +1,6 @@
 from django.test import TestCase
-from reservation.models import Menu
-from reservation.serializers import MenuSerializer
+from restaurant.models import Menu
+from restaurant.serializers import MenuSerializer
 
 class MenuViewTest(TestCase):
     def setUp(self):
