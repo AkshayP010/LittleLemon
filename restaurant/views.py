@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 from rest_framework.response import Response
 from django.contrib.auth.models import User
 from rest_framework import viewsets
@@ -11,7 +12,7 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
 
 def home(request):
-    return HttpResponse("Welcome to the Reservation app homepage!")
+    return render(request, 'index.html')
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
